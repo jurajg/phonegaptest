@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" /-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
+
+    <title>PhoneGap test</title>
+</head>
+
+<body>
+    <div class="app">
+	  <div data-role="page" id="home">
+	    <header data-role="header">
+		  <h1>Phonegap test</h1>
+		</header>
+        <div data-role="content">
+		  <nav data-role="navbar">
+		    <ul>
+			  <li><a href="#home" class="ui-btn-active">Home</a></li>
+			  <li><a href="#about">About</a></li>
+			  <li><a href="#contact">Contact</a></li>			  
+			</ul>
+		  </nav>
+		  
+		  
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra, arcu a viverra mollis, nisl nulla sodales lectus, ac facilisis erat nibh at ligula. Ut non euismod felis. Duis sagittis sapien efficitur faucibus gravida. Cras consectetur sagittis ante non placerat. In hac habitasse platea dictumst. Maecenas auctor aliquam faucibus. Quisque ut nulla at sapien sagittis commodo quis quis ipsum. Praesent in metus et enim iaculis varius.</p>
+
+		  <p>Quisque nec sem quis mi condimentum imperdiet. Integer aliquam ex sed consectetur mattis. Praesent tortor ex, hendrerit suscipit maximus vitae, mattis et risus. Aenean enim mauris, tempor nec justo sit amet, vehicula ultricies augue. Nulla facilisi. Vestibulum eget egestas arcu, sit amet maximus purus. Proin dictum dui quis lorem pharetra cursus. Etiam euismod, purus vitae laoreet luctus, eros neque sodales massa, sit amet venenatis risus tellus eu dolor. Pellentesque porttitor ut est id maximus. Suspendisse fringilla dui ut leo hendrerit faucibus. Maecenas gravida diam ipsum, ut ullamcorper risus fringilla sit amet. Vivamus hendrerit sem porta eleifend viverra. Praesent feugiat odio sed ex elementum, non convallis purus volutpat. Nullam ut quam massa. Sed sed sodales enim.</p>
+
+		  <p>on orci quis dolor scelerisque mattis vitae vestibulum tortor. Nunc vel facilisis nisi. Aliquam eget luctus enim. Praesent consectetur eget nisi vitae efficitur. Praesent commodo ipsum non condimentum elementum. Integer iaculis tortor sed nisi dictum ultricies. Nunc porttitor velit nec mauris faucibus luctus.</p>
+		  
+		  <img src="img/gopnik.jpg" style="width:100%;">
+		  <p> paragraph test bla bla bla bla abcde fghij klmno </p>
+		  <a href="#contact" class="ui-shadow ui-btn ui-corner-all">Contact us today!</a>
+		</div>
+		<footer data-role="footer">
+		  <h3>Copyright &copy; 2017</h3>
+		</footer>
+	  </div>
+	  
+	  <div data-role="page" id="about">
+	    <header data-role="header">
+		  <h1>About</h1>
+		</header>
+        <div data-role="content">
+		  <nav data-role="navbar">
+		    <ul>
+			  <li><a href="#home">Home</a></li>
+			  <li><a href="#about" class="ui-btn-active">About</a></li>
+			  <li><a href="#contact">Contact</a></li>			  
+			</ul>
+		  </nav>
+
+		  This is the about content.
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra, arcu a viverra mollis, nisl nulla sodales lectus, ac facilisis erat nibh at ligula. Ut non euismod felis. Duis sagittis sapien efficitur faucibus gravida. Cras consectetur sagittis ante non placerat. In hac habitasse platea dictumst. Maecenas auctor aliquam faucibus. Quisque ut nulla at sapien sagittis commodo quis quis ipsum. Praesent in metus et enim iaculis varius.</p>
+
+		  <p>Quisque nec sem quis mi condimentum imperdiet. Integer aliquam ex sed consectetur mattis. Praesent tortor ex, hendrerit suscipit maximus vitae, mattis et risus. Aenean enim mauris, tempor nec justo sit amet, vehicula ultricies augue. Nulla facilisi. Vestibulum eget egestas arcu, sit amet maximus purus. Proin dictum dui quis lorem pharetra cursus. Etiam euismod, purus vitae laoreet luctus, eros neque sodales massa, sit amet venenatis risus tellus eu dolor. Pellentesque porttitor ut est id maximus. Suspendisse fringilla dui ut leo hendrerit faucibus. Maecenas gravida diam ipsum, ut ullamcorper risus fringilla sit amet. Vivamus hendrerit sem porta eleifend viverra. Praesent feugiat odio sed ex elementum, non convallis purus volutpat. Nullam ut quam massa. Sed sed sodales enim.</p>
+
+		  <p>on orci quis dolor scelerisque mattis vitae vestibulum tortor. Nunc vel facilisis nisi. Aliquam eget luctus enim. Praesent consectetur eget nisi vitae efficitur. Praesent commodo ipsum non condimentum elementum. Integer iaculis tortor sed nisi dictum ultricies. Nunc porttitor velit nec mauris faucibus luctus.</p>
+
+		  </div>
+		<footer data-role="footer">
+		  <h3>Copyright &copy; 2017</h3>
+		</footer>
+	  </div>
+	  
+	  <div data-role="page" id="contact">
+	    <header data-role="header">
+		  <h1>Contact</h1>
+		</header>
+        <div data-role="content">
+		  <nav data-role="navbar">
+		    <ul>
+			  <li><a href="#home">Home</a></li>
+			  <li><a href="#about">About</a></li>
+			  <li><a href="#contact" class="ui-btn-active">Contact</a></li>			  
+			</ul>
+		  </nav>
+
+		  <p>This is the contact info.</p>
+		  <h3>Contact us!</h3>
+
+          <div>		  
+		  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160643.68725085096!2d2.1981765290143924!3d51.015084473621826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dc8b6dd9ff20b9%3A0x40af13e81646da0!2sDunkerk%2C+Francie!5e0!3m2!1scs!2scz!4v1501275662763" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		  </div>
+		  
+		  <h3>Location</h3>
+		  <ul>
+		    <li><strong>Foobar webdesign</strong></li>
+			<li>89 west main street</li>
+			<li>Dunkirk</li>
+			<li><strong>Email: </strong>aaaa@example.com</li>
+		  </ul>
+		</div>
+		<footer data-role="footer">
+		  <h3>Copyright &copy; 2017</h3>
+		</footer>
+	  </div>
+	  
+	  
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!--script type="text/javascript" src="js/jquery.js"--><!--/script--!>
+    <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+	
+	
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
